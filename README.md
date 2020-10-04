@@ -5,6 +5,7 @@
 Prerequisites
 
 Install [_Vagrant_](https://www.vagrantup.com/downloads) for your OS.
+Install [_Ansible_](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-the-control-machine) for your OS.
 Install [_Virtualbox_](https://www.virtualbox.org/wiki/Downloads) for your OS.
 Install [_Oracle VM VirtualBox Extension Pack_](https://download.virtualbox.org/virtualbox/6.1.14/Oracle_VM_VirtualBox_Extension_Pack-6.1.14.vbox-extpack)
 
