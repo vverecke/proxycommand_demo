@@ -1,0 +1,25 @@
+---
+- name: Set prerequisites for keyless authentication
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install sshpass with apt
+      apt:
+        name: sshpass
+        state: present
+
+    - name: Force through a keypair creation without a prompt
+      shell: yes y |ssh-keygen -f /home/vagrant/.ssh/id_rsa -t rsa -N ''
+      args:
+        creates: /home/vagrant/.ssh/id_rsa
+
+    - name: Chmod so that the key does not count as insecure
+      file:
+        path: /home/vagrant/.ssh/{{ item }}
+        mode: '0600'
+        owner: vagrant
+        group: vagrant
+      with_items:
+        - id_rsa
+        - id_rsa.pub

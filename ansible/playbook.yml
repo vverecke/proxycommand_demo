@@ -1,0 +1,8 @@
+---
+- name: Test implementation
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Healthcheck ansible
+    shell: "echo Hello from ansible"
