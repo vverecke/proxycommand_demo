@@ -36,6 +36,7 @@ merge:
   ignore:
     labels: ["do not merge"]
     comment_substrings: ["==DO_NOT_MERGE=="]
+    comments: ["Do not merge!"]
 
   # "method" defines the merge method. The available options are "merge",
   # "rebase", "squash", and "ff-only".
@@ -85,6 +86,7 @@ update:
   # bulldozer. It accepts the same keys as the trigger in the "merge" block.
   trigger:
     labels: ["WIP", "Update Me"]
+    comments: ["Bulldozer update please!"]
 
   # "ignore" defines the set of pull requests that should not be updated by
   # bulldozer. It accepts the same keys as the ignore in the "merge" block.
